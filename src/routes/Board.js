@@ -29,7 +29,7 @@ function Square(props) {
 }
 
 export const StyledBoard = styled.div`
-  height: 600px;
+  height: 100%;
   margin-bottom: 1rem;
   background-color: #34495e;
   color: #fff;
@@ -59,15 +59,11 @@ function Board() {
   };
 
   return (
-    <div>
-      <StyledBoard>
-        {
-          squares.map((v, i) => {
-            return renderSquare(i)
-          })
-        }
-      </StyledBoard>
-    </div>
+    <StyledBoard>
+      {squares.map((v, i) => {
+        return renderSquare(i);
+      })}
+    </StyledBoard>
   );
 }
 
@@ -77,7 +73,10 @@ export const ActionBar = styled.div`
 `;
 
 export const BoardContainer = styled.div`
-  width: 600px;
+  width: 80vw;
+  height: 80vw;
+  max-width: 600px;
+  max-height: 600px;
   text-align: center;
   margin: 0 auto;
 `;
@@ -103,8 +102,8 @@ function BoardScreen({ history }) {
 
   let status;
   if (winner) {
-    if (winner === 'tie') {
-      status = `Tie !`
+    if (winner === "tie") {
+      status = `Tie !`;
     } else {
       status = `Winner: ${nextPlayer} ${xIsNext ? "X" : "O"}`;
     }
