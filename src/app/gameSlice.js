@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-function calculateWinner(squares) {
+export function calculateWinner(squares) {
   const winDirections = [
     [0, 1, 2],
     [3, 4, 5],

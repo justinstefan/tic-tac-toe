@@ -13,8 +13,6 @@ import { withRouter } from "react-router-dom";
 import { Button } from "../common/Layout";
 import styled from "styled-components";
 
-import "./Game.css";
-
 export const StyledBox = styled.button`
   border: 6px solid #2c3e50;
   border-radius: 2px;
