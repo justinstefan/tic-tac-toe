@@ -73,8 +73,8 @@ export const ActionBar = styled.div`
 `;
 
 export const BoardContainer = styled.div`
-  width: 80vw;
-  height: 80vw;
+  width: 100vw;
+  height: 100vw;
   max-width: 600px;
   max-height: 600px;
   text-align: center;
